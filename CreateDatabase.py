@@ -17,7 +17,7 @@ mycursor.execute("")
 
 # ↓　"DESCRIBE table名"でそのテーブルの現在情報を表示する
 # mycursor.execute("DESCRIBE Classes")
-#
+
 # ↓　"DESCRIBE table名"で表示されたテーブル情報をプリントする
 # for x in mycursor:
 #     print(x)
