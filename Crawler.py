@@ -69,68 +69,68 @@ for yobi in range(1, 6):
 # プログラム2-5　「取得情報の整理」
 risyu_list = list(map(lambda x : x.replace("\n",""),risyu_list))
 data = np.array(risyu_list).reshape(-1,7)
-
+data = np.unique(data, axis=0)
 
 # プログラム2-6　「不要科目削除」
 # 大学院科目
-data = data[data[:, 0] != '\n経営管理研究科']
-data = data[data[:, 0] != '\n経済学研究科']
-data = data[data[:, 0] != '\n法学研究科']
-data = data[data[:, 0] != '\n社会学研究科']
-data = data[data[:, 0] != '\n言語社会研究科']
-data = data[data[:, 0] != '\n国際企業戦略研究科']
-data = data[data[:, 0] != '\n国際・公共政策教育部']
-data = data[data[:, 0] != '\n商学研究科']
-data = data[data[:, 0] != '\n法科大学院']
+data = data[data[:, 0] != '経営管理研究科']
+data = data[data[:, 0] != '経済学研究科']
+data = data[data[:, 0] != '法学研究科']
+data = data[data[:, 0] != '社会学研究科']
+data = data[data[:, 0] != '言語社会研究科']
+data = data[data[:, 0] != '国際企業戦略研究科']
+data = data[data[:, 0] != '国際・公共政策教育部']
+data = data[data[:, 0] != '商学研究科']
+data = data[data[:, 0] != '法科大学院']
 
 # 全学共通教育科目ゼミ
-data = data[data[:, 3] != '\n共通ゼミナール(3・4年)\n']
-data = data[data[:, 3] != '\n共通ゼミナール（副）(3・4年)\n']
-data = data[data[:, 3] != '\n共通ゼミナール(3年)\n']
-data = data[data[:, 3] != '\n共通ゼミナール（副）(3年)\n']
-data = data[data[:, 3] != '\n共通ゼミナール(4年)\n']
-data = data[data[:, 3] != '\n共通ゼミナール（副）(4年)\n']
+data = data[data[:, 3] != '共通ゼミナール(3・4年)']
+data = data[data[:, 3] != '共通ゼミナール（副）(3・4年)']
+data = data[data[:, 3] != '共通ゼミナール(3年)']
+data = data[data[:, 3] != '共通ゼミナール（副）(3年)']
+data = data[data[:, 3] != '共通ゼミナール(4年)']
+data = data[data[:, 3] != '共通ゼミナール（副）(4年)']
 
 # 商学部ゼミ
-data = data[data[:, 3] != '\n主ゼミナール(3年)\n']
-data = data[data[:, 3] != '\n副ゼミナール(3年)\n']
-data = data[data[:, 3] != '\n主ゼミナール(4年)\n']
-data = data[data[:, 3] != '\n副ゼミナール(4年)\n']
+data = data[data[:, 3] != '主ゼミナール(3年)']
+data = data[data[:, 3] != '副ゼミナール(3年)']
+data = data[data[:, 3] != '主ゼミナール(4年)']
+data = data[data[:, 3] != '副ゼミナール(4年)']
 
 # 経済学部ゼミ
-data = data[data[:, 3] != '\nゼミナール（3年）\n']
-data = data[data[:, 3] != '\nゼミナール（4年）\n']
-data = data[data[:, 3] != '\n副ゼミナール(3年)\n']
-data = data[data[:, 3] != '\n副ゼミナール(4年)\n']
+data = data[data[:, 3] != 'ゼミナール（3年）']
+data = data[data[:, 3] != 'ゼミナール（4年）']
+data = data[data[:, 3] != '副ゼミナール(3年)']
+data = data[data[:, 3] != '副ゼミナール(4年)']
 
 # 法学部ゼミ
-data = data[data[:, 3] != '\n主ゼミナール(3・4年)\n']
-data = data[data[:, 3] != '\n副ゼミナール(3・4年)\n']
-data = data[data[:, 3] != '\n主ゼミナール(3年)\n']
-data = data[data[:, 3] != '\n副ゼミナール(3年)\n']
-data = data[data[:, 3] != '\n主ゼミナール(4年)\n']
-data = data[data[:, 3] != '\n副ゼミナール(4年)\n']
+data = data[data[:, 3] != '主ゼミナール(3・4年)']
+data = data[data[:, 3] != '副ゼミナール(3・4年)']
+data = data[data[:, 3] != '主ゼミナール(3年)']
+data = data[data[:, 3] != '副ゼミナール(3年)']
+data = data[data[:, 3] != '主ゼミナール(4年)']
+data = data[data[:, 3] != '副ゼミナール(4年)']
 
 # 社会学部ゼミ
-data = data[data[:, 3] != '\n主ゼミナール(3・4年)\n']
-data = data[data[:, 3] != '\n副ゼミナール(3・4年)\n']
-data = data[data[:, 3] != '\n主ゼミナール(3年)\n']
-data = data[data[:, 3] != '\n副ゼミナール(3年)\n']
-data = data[data[:, 3] != '\n主ゼミナール(4年)\n']
-data = data[data[:, 3] != '\n副ゼミナール(4年)\n']
+data = data[data[:, 3] != '主ゼミナール(3・4年)']
+data = data[data[:, 3] != '副ゼミナール(3・4年)']
+data = data[data[:, 3] != '主ゼミナール(3年)']
+data = data[data[:, 3] != '副ゼミナール(3年)']
+data = data[data[:, 3] != '主ゼミナール(4年)']
+data = data[data[:, 3] != '副ゼミナール(4年)']
 
 # PACE
-data = data[data[:, 3] != '\nPACEⅠ(再履修1)\n']
-data = data[data[:, 3] != '\nPACEⅡ(再履修1)\n']
+data = data[data[:, 3] != 'PACEⅠ(再履修1)']
+data = data[data[:, 3] != 'PACEⅡ(再履修1)']
 
 for a in range(1, 63):
-    data = data[data[:, 3] != '\nPACEⅠ(' + str(a) + ')\n']
+    data = data[data[:, 3] != 'PACEⅠ(' + str(a) + ')']
 
-data = data[data[:, 3] != '\nPACEⅠ(再履修2)\n']
-data = data[data[:, 3] != '\nPACEⅡ(再履修2)\n']
+data = data[data[:, 3] != 'PACEⅠ(再履修2)']
+data = data[data[:, 3] != 'PACEⅡ(再履修2)']
 
 for b in range(1, 63):
-    data = data[data[:, 3] != '\nPACEⅡ(' + str(b) + ')\n']
+    data = data[data[:, 3] != 'PACEⅡ(' + str(b) + ')']
 
 
 
