@@ -68,6 +68,8 @@ for yobi in range(1, 6):
         
 # プログラム2-5　「取得情報の整理」
 risyu_list = list(map(lambda x : x.replace("\n",""),risyu_list))
+risyu_list = [s.replace('        ○            ', '抽選科目') for s in risyu_list]
+risyu_list = [s.replace('                -    ', '抽選なし') for s in risyu_list]
 data = np.array(risyu_list).reshape(-1,7)
 data = np.unique(data, axis=0)
 
